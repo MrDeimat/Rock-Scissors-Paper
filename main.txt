@@ -1,0 +1,136 @@
+import random
+import time
+player = 0
+bot = 0
+print('\033[96mRock Scissors Paper\033[0m')
+def game():
+
+    time.sleep(1)
+    print("1")
+    time.sleep(1)
+    print("2")
+    time.sleep(1)
+    print("3")
+    print("Rock = 1, Scissors = 2, Paper = 3")
+    bot = random.randint(1, 3)
+    player = int(input("Write 1/2/3"))
+    if player == bot:
+        print("Tie")
+        game()
+    if player == 1:
+        print("""
+                   _______
+               ---'   ____)
+                     (_____)
+                     (_____)
+                     (____)
+               ---.__(___)
+               """)
+        if bot == 2:
+            print("""
+                _______
+            ---'   ____)____
+                      ______)
+                   __________)
+                  (____)
+            ---.__(___)
+            """)
+            print("You Win")
+            game()
+        if bot == 3:
+            print("""
+                 _______
+            ---'    ____)____
+                       ______)
+                      _______)
+                     _______)
+            ---.__________)
+            """)
+
+            print("You Lost")
+            game()
+    if player == 2:
+        print("""
+            _______
+        ---'   ____)____
+                  ______)
+               __________)
+              (____)
+        ---.__(___)
+        """)
+        if bot == 3:
+            print("""
+                 _______
+            ---'    ____)____
+                       ______)
+                      _______)
+                     _______)
+            ---.__________)
+            """)
+
+            print("You Win")
+            game()
+        if bot == 1:
+            print("""
+                              _______
+                          ---'   ____)
+                                (_____)
+                                (_____)
+                                (____)
+                          ---.__(___)
+                          """)
+            print("You Lost")
+            game()
+    if player == 3:
+        print("""
+             _______
+        ---'    ____)____
+                   ______)
+                  _______)
+                 _______)
+        ---.__________)
+        """)
+        if bot == 1:
+            print("""
+                              _______
+                          ---'   ____)
+                                (_____)
+                                (_____)
+                                (____)
+                          ---.__(___)
+                          """)
+            print("You Win")
+            game()
+        if bot == 2:
+            print("""
+                _______
+            ---'   ____)____
+                      ______)
+                   __________)
+                  (____)
+            ---.__(___)
+            """)
+            print("You Lost")
+            game()
+
+
+
+
+
+
+
+name = input("Enter your name")
+
+a = input("Start?(y/n)")
+if a == "y":
+    print(name, "vs Bot")
+    game()
+else:
+    print("bye")
+
+
+
+
+
+
+
